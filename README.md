@@ -3,4 +3,6 @@ Set your wallpaper through discord for some odd reason, can also have others set
 
 Lines you need to change: 10, 11, 12, 28, 31, 32
 
+To use the bot type 1set with an image attached
+
 ![Alt Text](https://media.giphy.com/media/xTxoFTGMACJCrJJzUH/giphy.gif)
