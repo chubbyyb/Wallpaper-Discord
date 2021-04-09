@@ -6,7 +6,7 @@ from discord.ext.commands import Bot
 import glob
 
 def changeWallpaper():
-    threading.Timer(5.0, changeWallpaper).start()
+    #threading.Timer(5.0, changeWallpaper).start()
     img0 = r"C:\Users\chubs\Pictures\1.jpg" # Set your own paths here but make sure the file formats are correct
     img1 = r"C:\Users\chubs\Pictures\1.jpeg"
     img2 = r"C:\Users\chubs\Pictures\1.png"
@@ -58,6 +58,7 @@ async def set(ctx):
         if any(attachment.filename.lower().endswith(image) for image in image_types):
             fileEXT = os.path.splitext(attachment.filename)[1]  # SPLIT TO GET THE FILE EXTENTION SO PIC(.PNG)
             await attachment.save(filePath + fileEXT)  # SAVE TO FILEPATH + ITS EXTENTION
+            changeWallpaper()
             await ctx.send('Set Image!')
         else:
             await ctx.send('Failed, Please provide an image of format PNG, JPG, JPEG, GIF ')
