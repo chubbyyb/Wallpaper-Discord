@@ -5,4 +5,4 @@ Lines you need to change: 10, 11, 12, 28, 31, 32
 
 To use the bot type 1set with an image attached
 
-![Alt Text](https://media.giphy.com/media/xTxoFTGMACJCrJJzUH/giphy.gif)
+![Alt Text](https://media.giphy.com/media/Rd7WlRF8tfR4QW6jKU/giphy.gif)
