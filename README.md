@@ -9,4 +9,4 @@ To use the bot type 1set with an image attached
 
 
 # WARNING
-PLEASE DO USE ONLY AN EMPTY FOLDER!
+PLEASE USE AN EMPTY FOLDER
