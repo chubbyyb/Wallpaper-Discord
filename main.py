@@ -7,9 +7,9 @@ import glob
 
 def changeWallpaper():
     #threading.Timer(5.0, changeWallpaper).start()
-    img0 = r"C:\Users\chubs\Pictures\1.jpg" # Set your own paths here but make sure the file formats are correct
-    img1 = r"C:\Users\chubs\Pictures\1.jpeg"
-    img2 = r"C:\Users\chubs\Pictures\1.png"
+    img0 = r"C:\Users\Beroris\Desktop\h\1.jpg" # Set your own paths here but make sure the file formats are correct
+    img1 = r"C:\Users\Beroris\Desktop\h\1.jpeg"
+    img2 = r"C:\Users\Beroris\Desktop\h\1.png"
 
     if os.path.exists(img0):
         ctypes.windll.user32.SystemParametersInfoW(20,0,img0,0)
@@ -25,11 +25,12 @@ changeWallpaper()
 
 
 
-token = 'Set your token'
-client = discord.Client()
-bot = Bot(command_prefix='1', case_insensitive=False)
-imagesPath = r'C:\Users\chubs\Pictures\*'
-filePath = r'C:\Users\chubs\Pictures\1'
+token = 'TOKEN'
+intents = discord.Intents.all()
+client = discord.Client(intents=intents)
+bot = Bot(command_prefix='1', case_insensitive=False, intents=intents)
+imagesPath = r'C:\Users\Beroris\Desktop\h\*'
+filePath = r'C:\Users\Beroris\Desktop\h\1'
 image_types = ["png", "jpeg", "gif", "jpg"]
 
 @bot.event
@@ -64,3 +65,4 @@ async def set(ctx):
             await ctx.send('Failed, Please provide an image of format PNG, JPG, JPEG, GIF ')
 
 bot.run(token)
+
