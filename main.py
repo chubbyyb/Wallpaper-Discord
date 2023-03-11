@@ -1,15 +1,24 @@
 import os
 import ctypes
-import threading
 import discord
 from discord.ext.commands import Bot
 import glob
+import json
+
+
+with open("config.json", "r") as f:
+    config = json.load(f)
+
+imgPath = config["folder"]
+token = config["token"]
+print(imgPath)
 
 def changeWallpaper():
     #threading.Timer(5.0, changeWallpaper).start()
-    img0 = r"C:\Users\Beroris\Desktop\h\1.jpg" # Set your own paths here but make sure the file formats are correct
-    img1 = r"C:\Users\Beroris\Desktop\h\1.jpeg"
-    img2 = r"C:\Users\Beroris\Desktop\h\1.png"
+    img0 = imgPath+"\\1.jpg" # Set your own paths here but make sure the file formats are correct
+    img1 = imgPath+"\\1.jpeg"
+    img2 = imgPath+"\\1.png"
+    print(img0)
 
     if os.path.exists(img0):
         ctypes.windll.user32.SystemParametersInfoW(20,0,img0,0)
@@ -23,14 +32,11 @@ changeWallpaper.counter = 0
 changeWallpaper()
 
 
-
-
-token = 'TOKEN'
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 bot = Bot(command_prefix='1', case_insensitive=False, intents=intents)
-imagesPath = r'C:\Users\Beroris\Desktop\h\*'
-filePath = r'C:\Users\Beroris\Desktop\h\1'
+imagesPath = imgPath+'\\*'
+filePath = imgPath+'\\1'
 image_types = ["png", "jpeg", "gif", "jpg"]
 
 @bot.event
@@ -65,4 +71,3 @@ async def set(ctx):
             await ctx.send('Failed, Please provide an image of format PNG, JPG, JPEG, GIF ')
 
 bot.run(token)
-
