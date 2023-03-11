@@ -1,5 +1,5 @@
 # Wallpaper-Discord
-Set your wallpaper through discord for some odd reason, can also have others set your wallpaper. If you want a whitelist just make a bot check and make a list with discord ids
+Set your wallpaper through discord, can also have others set your wallpaper. If you want a whitelist just make a bot check and make a list with discord ids
 
 1. Must have python installed
 2. pip install -r requirements.txt
