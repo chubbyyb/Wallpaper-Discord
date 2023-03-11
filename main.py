@@ -5,7 +5,7 @@ from discord.ext.commands import Bot
 import glob
 import json
 
-
+# Get the config; Path and token
 with open("config.json", "r") as f:
     config = json.load(f)
 
@@ -46,6 +46,9 @@ async def on_ready():
     print("Ayoooooooo, we logged in as {0.user}".format(bot))
 
 
+
+# Bot commands
+# ---------------------------------------
 @bot.command()
 async def set(ctx):
     # CLEAR IMAGES FIRST
@@ -70,4 +73,11 @@ async def set(ctx):
         else:
             await ctx.send('Failed, Please provide an image of format PNG, JPG, JPEG, GIF ')
 
-bot.run(token)
+@bot.command()
+async def github(ctx):
+    await ctx.send('https://github.com/chubbyyb/Wallpaper-Discord')
+
+
+# Launch the bot
+if __name__ == "__main__":
+    bot.run(token)
