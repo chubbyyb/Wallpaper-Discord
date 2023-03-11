@@ -5,6 +5,10 @@ from discord.ext.commands import Bot
 import glob
 import json
 
+if os.path.exists("config.json") == False:
+    print("Config file not found, please run setup.py")
+    quit()
+
 # Get the config; Path and token
 with open("config.json", "r") as f:
     config = json.load(f)
