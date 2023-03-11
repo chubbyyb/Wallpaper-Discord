@@ -3,8 +3,9 @@ Set your wallpaper through discord for some odd reason, can also have others set
 
 1. Must have python installed
 2. pip install -r requirements.txt
-3. Run setup.py
-4. Run main.py
+3. Must create a bot through the discord developer portal
+4. Run setup.py
+5. Run main.py
 
 To use the bot type 1set with an image attached
 
